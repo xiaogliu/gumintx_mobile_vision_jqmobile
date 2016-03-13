@@ -9,6 +9,13 @@
 *
 */
 
+// 不知道为什么，chrome浏览器又是不支持jqmobile，因为ajax缘故？？？？加上下面悟行代码OK
+    $(document).bind('mobileinit',function(){
+        $.mobile.changePage.defaults.changeHash = false;
+        $.mobile.hashListeningEnabled = false;
+        $.mobile.pushStateEnabled = false;
+    });
+//针对chrome hack结束
 
 (function ( root, doc, factory ) {
 	if ( typeof define === "function" && define.amd ) {
